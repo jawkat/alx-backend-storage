@@ -1,3 +1,7 @@
+-- Write a SQL script that creates a trigger
+-- trigger decreases the quantity of an item after adding a new order.
+-- Quantity in the table items can be negative.
+
 CREATE TRIGGER quantity_update AFTER INSERT ON orders
 FOR EACH ROW
 UPDATE items
