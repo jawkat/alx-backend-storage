@@ -12,4 +12,4 @@ def schools_by_topic(mongo_collection, topic):
     Returns:
         _type_: _description_
     """
-    return mongo_collection.find({"topic": topic})
+    return mongo_collection.find({"topics": topic})
