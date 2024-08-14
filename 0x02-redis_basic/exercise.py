@@ -34,8 +34,8 @@ def call_history(method: Callable) -> Callable:
         """returns original method"""
 
         res = method(self, *args, **kwargs)
-        self._redis.lpush(key_inputs, res)
-        self._redis.rpush(key_outputs, str(args))
+        self._redis.lpush(key_outputs, res)
+        self._redis.rpush(key_inputs, str(args))
 
         return res
 
